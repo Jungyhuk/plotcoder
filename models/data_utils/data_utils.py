@@ -310,7 +310,7 @@ class DataProcessor(object):
 				st = ed
 				continue
 			ast_tree = ast_tree['body'][0]['value']
-			if 'func' not in ast_tree:
+			if ast_tree is None or 'func' not in ast_tree:
 				st = ed
 				continue
 			func = ast_tree['func']
